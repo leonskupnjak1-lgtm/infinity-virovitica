@@ -1,0 +1,7 @@
+.tmp/
+*.env
+credentials.json
+token.json
+Thumbs.db
+.DS_Store
+assets/infinity burger cropped.jpg

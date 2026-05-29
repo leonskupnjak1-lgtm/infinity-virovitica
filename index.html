@@ -50,11 +50,8 @@
       display:flex; align-items:center; gap:10px;
     }
     .nav-symbol {
-      width:32px; height:32px;
-      background:var(--gold);
-      clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
-      display:flex; align-items:center; justify-content:center;
-      font-size:11px; color:var(--bg); font-weight:700;
+      height:38px; width:auto;
+      object-fit:contain;
     }
     .nav-links { display:flex; gap:40px; list-style:none; align-items:center; }
     .nav-links a {
@@ -564,7 +561,7 @@
 <!-- ── NAV ── -->
 <nav id="nav">
   <a href="#" class="nav-brand">
-    <div class="nav-symbol">∞</div>
+    <img src="brand%20guide%20lines/infinity%20logo.jpg" alt="Infinity logo" class="nav-symbol">
     INFINITY
   </a>
   <ul class="nav-links">

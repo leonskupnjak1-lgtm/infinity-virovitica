@@ -20,7 +20,7 @@
       --border:   rgba(255,255,255,0.06);
     }
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
+    html { scroll-behavior:smooth; scroll-padding-top:72px; }
     body {
       background:var(--bg);
       color:var(--text);
@@ -514,6 +514,7 @@
       .gallery-header { padding:0 32px; }
       .gallery-grid { padding:0 32px; grid-template-rows:240px 240px; }
       .about-grid, .hours-grid, .res-grid { grid-template-columns:1fr; gap:56px; }
+      .res-copy { order:2; }
       .about-vis { height:400px; }
       .offers-grid { grid-template-columns:1fr; }
       .footer-top { grid-template-columns:1fr 1fr; gap:40px; }

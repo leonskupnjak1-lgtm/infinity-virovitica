@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>document.documentElement.style.setProperty('--vh',(window.innerHeight*.01)+'px');</script>
   <title>INFINITY — Caffe Bar & Bistro | Virovitica</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -918,13 +919,11 @@
 
 <script>
   /* ── iOS VIEWPORT HEIGHT FIX ── */
-  (function() {
-    var setVh = function() {
+  window.addEventListener('orientationchange', function() {
+    setTimeout(function() {
       document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
-    };
-    setVh();
-    window.addEventListener('orientationchange', function() { setTimeout(setVh, 300); });
-  })();
+    }, 300);
+  });
 
   /* ── NAV SCROLL ── */
   const nav = document.getElementById('nav');

@@ -403,20 +403,27 @@
     .hi.today .hi-day { color:var(--gold); }
     .info-card {
       background:var(--card); border:1px solid var(--border);
-      padding:44px;
+      overflow:hidden;
     }
     .map-box {
-      height:240px; margin-bottom:32px; overflow:hidden;
+      height:360px; overflow:hidden;
       position:relative;
     }
     .map-box iframe {
-      width:100%; height:100%; border:0;
+      width:100%; height:100%; border:0; display:block;
     }
-    .contact-list { list-style:none; display:flex; flex-direction:column; gap:18px; }
-    .contact-list li { display:flex; gap:14px; align-items:flex-start; font-size:13px; }
-    .ci-icon { color:var(--gold); width:18px; flex-shrink:0; margin-top:2px; }
-    .ci-label { color:var(--text); font-weight:500; display:block; margin-bottom:2px; }
-    .ci-val { color:var(--muted); }
+    .map-footer {
+      padding:16px 24px;
+      border-top:1px solid var(--border);
+      display:flex; align-items:center; justify-content:flex-end;
+    }
+    .map-dir-btn {
+      font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--gold); text-decoration:none;
+      border:1px solid rgba(212,175,55,.35); padding:9px 20px;
+      transition:background .25s, color .25s;
+    }
+    .map-dir-btn:hover { background:var(--gold); color:var(--bg); }
 
     /* ── RESERVATION ── */
     #res { background:var(--bg); }
@@ -540,7 +547,8 @@
       .nav-links { display:none; }
       .hamburger { display:flex; }
       section { padding:72px 20px; }
-      #gallery { padding:72px 0; }
+      #gallery { padding:72px 0 0; }
+      #hours { border-top:1px solid rgba(212,175,55,.22); }
       .gallery-header { padding:0 20px; }
       .gallery-grid {
         padding:0 20px;
@@ -811,26 +819,13 @@
         <div class="info-card">
           <div class="map-box">
             <iframe
-              src="https://maps.google.com/maps?q=45.8397849,17.3867753&z=16&output=embed"
+              src="https://maps.google.com/maps?q=Infinity+Caffe+Bar+%26+Bistro,+Ul.+Matije+Gupca+56,+33000+Virovitica&z=17&output=embed"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-          <ul class="contact-list">
-            <li>
-              <span class="ci-icon">📍</span>
-              <div>
-                <span class="ci-label">Adresa</span>
-                <span class="ci-val" style="font-size:15px;color:var(--text);font-weight:500;">Ul. Matije Gupca 56, 33000 Virovitica</span>
-              </div>
-            </li>
-            <li>
-              <span class="ci-icon">📞</span>
-              <div>
-                <span class="ci-label">Telefon</span>
-                <span class="ci-val" style="font-size:15px;color:var(--text);font-weight:500;">+385 33 500 152</span>
-              </div>
-            </li>
-          </ul>
+          <div class="map-footer">
+            <a href="https://maps.google.com/maps?q=Infinity+Caffe+Bar+%26+Bistro,+Ul.+Matije+Gupca+56,+33000+Virovitica" target="_blank" rel="noopener" class="map-dir-btn">Otvori u Google Maps ↗</a>
+          </div>
         </div>
       </div>
     </div>
